@@ -15,7 +15,6 @@ body{
 main{
   display: flex;
   justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 
@@ -28,21 +27,95 @@ header>h1{
 }
 
 .start-btn{
+  font-size: 1.2rem;
+  margin-top: 1.8em;
+  padding: 1em 3.75em;
+}
+
+.check-btn{
+  display: block;
+  margin: 2em;
+  padding: 1.5em 3.75em;
+  letter-spacing: 0.5px;
+}
+
+.start-btn, .check-btn{
   color:#F5F7FB;
   background-color: #4D5B9E;
   border-radius: 15px;
-  padding: 1em 3.75em;
   border: none;
   cursor: pointer;
-  font-size: 1.2rem;
-  margin-top: 1.8em;
+  font-weight: 600;
+  font-family: "Inter", system-ui;
 }
 
-.start-btn:hover{
+.start-btn:hover, .check-btn:hover{
   background-color: #445096;
 }
 
-.start-btn:active{
+.start-btn:active, .check-btn:active{
   box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
 
+div.answer-container{
+  display: flex;
+  gap: 0.815em;
+  align-items: center;
+}
+
+div.question-container{
+  border-bottom: 1px solid #DBDEF0;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+form.questions-container{
+  display: block;
+  width: 80%;
+  min-width: 320px;
+  max-width: 800px;
+  margin: 2.5em auto;
+}
+
+.question{
+  font-weight: 700;
+
+}
+
+.hide-radio{
+  opacity: 0;
+  width: 0;
+  position: absolute;
+}
+
+.answer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 65px;
+  padding: 0.4em 1.25em;
+}
+
+.answer-label{
+  cursor: pointer;
+  font-family: "Inter", system-ui;
+  font-weight: 500;
+  user-select: none;
+}
+
+.form-footer, .answer-label{
+  font-family: "Inter", system-ui;
+  user-select: none;
+}
+
+
+.form-footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
