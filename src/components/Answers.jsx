@@ -19,14 +19,12 @@ export default function(props){
             if(isChecked)
                 styleObject.backgroundColor = "#D6DBF5"
         }else{
-            if(isChecked){
-                if(!isCorrect){
-                    styleObject.backgroundColor= "#F8BCBC"
-                    styleObject.pointerEvents = "none"
-                }
-            }else{
-                styleObject.pointerEvents = "none"
-            }
+            if(isChecked && !isCorrect)
+                styleObject.backgroundColor= "#F8BCBC"
+
+            
+            styleObject.pointerEvents = "none"
+            
 
             if(isCorrect){
                 styleObject.backgroundColor = "#94D7A2"
@@ -34,6 +32,8 @@ export default function(props){
             }
             else
                 styleObject.opacity = "0.5"
+
+            
         }
 
         
